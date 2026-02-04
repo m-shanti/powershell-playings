@@ -115,3 +115,24 @@ Request
 Response
 
 ![identityImage](photo.jpg)
+
+Request
+
+`https://dev.services.ergo/ITERGO/API_CUSTOMER/_apis/projectanalysis/languagemetrics`
+
+Response
+
+```
+{
+    "url":  "https://dev.services.ergo/ITERGO/ee22534d-d873-4da5-ae6b-1f1719081628/_apis/projectanalysis/languagemetrics",
+    "resultPhase":  "preliminary",
+    "languageBreakdown":  [
+
+                          ],
+    "repositoryLanguageAnalytics":  [
+
+                                    ],
+    "id":  "ee22534d-d873-4da5-ae6b-1f1719081628"
+}
+```
+
