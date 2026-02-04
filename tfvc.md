@@ -1,7 +1,8 @@
+Request
 `https://dev.services.ergo/ITERGO/API_CUSTOMER/_apis/tfvc/items?api-version=7.0&path=%24%2FAPI_CUSTOMER`
 
+Response
 ```
-Request succeeded
 {
     "version":  283516,
     "changeDate":  "2019-05-29T12:11:15.8Z",
@@ -19,3 +20,92 @@ Request succeeded
                }
 }
 ```
+
+Request
+`https://dev.services.ergo/ITERGO/API_CUSTOMER/_apis/tfvc/changesets/283516 ?api-version=7.0`
+
+Response
+```
+{
+    "changesetId":  283516,
+    "url":  "https://dev.services.ergo/ITERGO/API_CUSTOMER/_apis/tfvc/changesets/283516",
+    "author":  {
+                   "displayName":  "Voß, Jürgen (TEMA2HH)",
+                   "url":  "https://dev.services.ergo/ITERGO/_apis/Identities/cac68089-ecc5-4325-99f2-4ba3c4367643",
+                   "id":  "cac68089-ecc5-4325-99f2-4ba3c4367643",
+                   "uniqueName":  "ERGO\\A25731",
+                   "imageUrl":  "https://dev.services.ergo/ITERGO/_api/_common/identityImage?id=cac68089-ecc5-4325-99f2-4ba3c4367643"
+               },
+    "checkedInBy":  {
+                        "displayName":  "Voß, Jürgen (TEMA2HH)",
+                        "url":  "https://dev.services.ergo/ITERGO/_apis/Identities/cac68089-ecc5-4325-99f2-4ba3c4367643",
+                        "id":  "cac68089-ecc5-4325-99f2-4ba3c4367643",
+                        "uniqueName":  "ERGO\\A25731",
+                        "imageUrl":  "https://dev.services.ergo/ITERGO/_api/_common/identityImage?id=cac68089-ecc5-4325-99f2-4ba3c4367643"
+                    },
+    "createdDate":  "2019-05-29T12:11:15.8Z",
+    "comment":  "Created team project folder $/API_CUSTOMER via the Team Project Creation Wizard",
+    "_links":  {
+                   "self":  {
+                                "href":  "https://dev.services.ergo/ITERGO/API_CUSTOMER/_apis/tfvc/changesets/283516"
+                            },
+                   "changes":  {
+                                   "href":  "https://dev.services.ergo/ITERGO/_apis/tfvc/changesets/283516/changes"
+                               },
+                   "workItems":  {
+                                     "href":  "https://dev.services.ergo/ITERGO/_apis/tfvc/changesets/283516/workItems"
+                                 },
+                   "web":  {
+                               "href":  "https://dev.services.ergo/ITERGO/API_CUSTOMER/_versionControl/changeset/283516"
+                           },
+                   "author":  {
+                                  "href":  "https://dev.services.ergo/ITERGO/_apis/Identities/cac68089-ecc5-4325-99f2-4ba3c4367643"
+                              },
+                   "checkedInBy":  {
+                                       "href":  "https://dev.services.ergo/ITERGO/_apis/Identities/cac68089-ecc5-4325-99f2-4ba3c4367643"
+                                   }
+               }
+}
+```
+
+Request
+`https://dev.services.ergo/ITERGO/_apis/Identities/cac68089-ecc5-4325-99f2-4ba3c4367643`
+
+Response
+```
+{
+    "Id":  "cac68089-ecc5-4325-99f2-4ba3c4367643",
+    "Descriptor":  {
+                       "IdentityType":  "System.Security.Principal.WindowsIdentity",
+                       "Identifier":  "S-1-5-21-1177238915-651377827-725345543-63948"
+                   },
+    "ProviderDisplayName":  "Voß, Jürgen (TEMA2HH)",
+    "CustomDisplayName":  null,
+    "DisplayName":  "Voß, Jürgen (TEMA2HH)",
+    "IsActive":  true,
+    "UniqueUserId":  0,
+    "IsContainer":  false,
+    "Members":  [
+
+                ],
+    "MemberOf":  [
+
+                 ],
+    "Properties":  {
+                       "SchemaClassName":  "User",
+                       "Description":  "Voß, Jürgen; TEMA2HH, +49 40 6376-6411",
+                       "Domain":  "ERGO",
+                       "Account":  "A25731",
+                       "DN":  "CN=A25731,OU=Users,OU=.Common,OU=IR,DC=CORP,DC=ERGO",
+                       "Mail":  "Juergen.Voss@ITERGO.com",
+                       "SpecialType":  "Generic",
+                       "ComplianceValidated":  "2026-01-24T00:00:00Z",
+                       "DirectoryAlias":  "A25731"
+                   }
+}
+```
+
+Request
+`https://dev.services.ergo/ITERGO/_api/_common/identityImage?id=cac68089-ecc5-4325-99f2-4ba3c4367643`
+Response
+![identityImage](photo.jpg)
