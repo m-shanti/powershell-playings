@@ -61,3 +61,47 @@ Request succeeded
 
 
 
+
+
+https://dev.services.ergo/ITERGO/API_CUSTOMER/_apis/tfvc/changesets/283516 ?api-version=7.0
+Request succeeded
+{
+    "changesetId":  283516,
+    "url":  "https://dev.services.ergo/ITERGO/API_CUSTOMER/_apis/tfvc/changesets/283516",
+    "author":  {
+                   "displayName":  "Voß, Jürgen (TEMA2HH)",
+                   "url":  "https://dev.services.ergo/ITERGO/_apis/Identities/cac68089-ecc5-4325-99f2-4ba3c4367643",
+                   "id":  "cac68089-ecc5-4325-99f2-4ba3c4367643",
+                   "uniqueName":  "ERGO\\A25731",
+                   "imageUrl":  "https://dev.services.ergo/ITERGO/_api/_common/identityImage?id=cac68089-ecc5-4325-99f2-4ba3c4367643"
+               },
+    "checkedInBy":  {
+                        "displayName":  "Voß, Jürgen (TEMA2HH)",
+                        "url":  "https://dev.services.ergo/ITERGO/_apis/Identities/cac68089-ecc5-4325-99f2-4ba3c4367643",
+                        "id":  "cac68089-ecc5-4325-99f2-4ba3c4367643",
+                        "uniqueName":  "ERGO\\A25731",
+                        "imageUrl":  "https://dev.services.ergo/ITERGO/_api/_common/identityImage?id=cac68089-ecc5-4325-99f2-4ba3c4367643"
+                    },
+    "createdDate":  "2019-05-29T12:11:15.8Z",
+    "comment":  "Created team project folder $/API_CUSTOMER via the Team Project Creation Wizard",
+    "_links":  {
+                   "self":  {
+                                "href":  "https://dev.services.ergo/ITERGO/API_CUSTOMER/_apis/tfvc/changesets/283516"
+                            },
+                   "changes":  {
+                                   "href":  "https://dev.services.ergo/ITERGO/_apis/tfvc/changesets/283516/changes"
+                               },
+                   "workItems":  {
+                                     "href":  "https://dev.services.ergo/ITERGO/_apis/tfvc/changesets/283516/workItems"
+                                 },
+                   "web":  {
+                               "href":  "https://dev.services.ergo/ITERGO/API_CUSTOMER/_versionControl/changeset/283516"
+                           },
+                   "author":  {
+                                  "href":  "https://dev.services.ergo/ITERGO/_apis/Identities/cac68089-ecc5-4325-99f2-4ba3c4367643"
+                              },
+                   "checkedInBy":  {
+                                       "href":  "https://dev.services.ergo/ITERGO/_apis/Identities/cac68089-ecc5-4325-99f2-4ba3c4367643"
+                                   }
+               }
+}
