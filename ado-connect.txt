@@ -116,3 +116,40 @@ Request succeeded
                                    }
                }
 }
+
+
+
+
+
+https://dev.services.ergo/ITERGO/_apis/Identities/cac68089-ecc5-4325-99f2-4ba3c4367643
+Request succeeded
+{
+    "Id":  "cac68089-ecc5-4325-99f2-4ba3c4367643",
+    "Descriptor":  {
+                       "IdentityType":  "System.Security.Principal.WindowsIdentity",
+                       "Identifier":  "S-1-5-21-1177238915-651377827-725345543-63948"
+                   },
+    "ProviderDisplayName":  "Voß, Jürgen (TEMA2HH)",
+    "CustomDisplayName":  null,
+    "DisplayName":  "Voß, Jürgen (TEMA2HH)",
+    "IsActive":  true,
+    "UniqueUserId":  0,
+    "IsContainer":  false,
+    "Members":  [
+
+                ],
+    "MemberOf":  [
+
+                 ],
+    "Properties":  {
+                       "SchemaClassName":  "User",
+                       "Description":  "Voß, Jürgen; TEMA2HH, +49 40 6376-6411",
+                       "Domain":  "ERGO",
+                       "Account":  "A25731",
+                       "DN":  "CN=A25731,OU=Users,OU=.Common,OU=IR,DC=CORP,DC=ERGO",
+                       "Mail":  "Juergen.Voss@ITERGO.com",
+                       "SpecialType":  "Generic",
+                       "ComplianceValidated":  "2026-01-24T00:00:00Z",
+                       "DirectoryAlias":  "A25731"
+                   }
+}
