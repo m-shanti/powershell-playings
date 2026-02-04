@@ -26,7 +26,17 @@ $changesetId  = "283516"
 # url to changes is built in a little different way than previous
 
 # uri do identity
-$uri = "https://$server/$organization/_apis/Identities/cac68089-ecc5-4325-99f2-4ba3c4367643"
+#$uri = "https://$server/$organization/_apis/Identities/cac68089-ecc5-4325-99f2-4ba3c4367643"
+
+# uri to identity image
+#$uri = "https://$server/$organization/_api/_common/identityImage?id=cac68089-ecc5-4325-99f2-4ba3c4367643"
+# doesn't work - (401) Unauthorized
+
+# uri to analytics
+#$uri = "https://$server/$organization/$project/_apis/projectanalysis/languagemetrics"
+
+
+$uri = "https://dev.services.ergo/ITERGO/ee22534d-d873-4da5-ae6b-1f1719081628/_apis/projectanalysis/languagemetrics"
 
 # - list all "commits"
 
@@ -57,123 +67,15 @@ try {
 
     Write-Host "Request succeeded" -ForegroundColor Green
     $response | ConvertTo-Json -Depth 10
+
+#  "https://$server/$organization/_api/_common/identityImage?id=cac68089-ecc5-4325-99f2-4ba3c4367643"
+#    Invoke-WebRequest `
+#        -Method Get `
+#        -Uri $uri `
+#        -Headers $headers `
+#        -OutFile "photo.jpg"
 }
 catch {
     Write-Host "Request failed" -ForegroundColor Red
     Write-Host $_.Exception.Message
 }
-
-
-
-
-
-https://dev.services.ergo/ITERGO/API_CUSTOMER/_apis/tfvc/items?api-version=7.0&path=%24%2FAPI_CUSTOMER
-Request succeeded
-{
-    "version":  283516,
-    "changeDate":  "2019-05-29T12:11:15.8Z",
-    "encoding":  -3,
-    "path":  "$/API_CUSTOMER",
-    "isFolder":  true,
-    "contentMetadata":  {
-                            "fileName":  "API_CUSTOMER"
-                        },
-    "url":  "https://dev.services.ergo/ITERGO/API_CUSTOMER/_apis/tfvc/items/$/API_CUSTOMER?versionType=Latest\u0026versionOptions=None",
-    "_links":  {
-                   "self":  {
-                                "href":  "https://dev.services.ergo/ITERGO/API_CUSTOMER/_apis/tfvc/items/$/API_CUSTOMER?versionType=Changeset\u0026version=283516"
-                            }
-               }
-}
-
-
-
-
-
-
-https://dev.services.ergo/ITERGO/API_CUSTOMER/_apis/tfvc/changesets/283516 ?api-version=7.0
-Request succeeded
-{
-    "changesetId":  283516,
-    "url":  "https://dev.services.ergo/ITERGO/API_CUSTOMER/_apis/tfvc/changesets/283516",
-    "author":  {
-                   "displayName":  "Voß, Jürgen (TEMA2HH)",
-                   "url":  "https://dev.services.ergo/ITERGO/_apis/Identities/cac68089-ecc5-4325-99f2-4ba3c4367643",
-                   "id":  "cac68089-ecc5-4325-99f2-4ba3c4367643",
-                   "uniqueName":  "ERGO\\A25731",
-                   "imageUrl":  "https://dev.services.ergo/ITERGO/_api/_common/identityImage?id=cac68089-ecc5-4325-99f2-4ba3c4367643"
-               },
-    "checkedInBy":  {
-                        "displayName":  "Voß, Jürgen (TEMA2HH)",
-                        "url":  "https://dev.services.ergo/ITERGO/_apis/Identities/cac68089-ecc5-4325-99f2-4ba3c4367643",
-                        "id":  "cac68089-ecc5-4325-99f2-4ba3c4367643",
-                        "uniqueName":  "ERGO\\A25731",
-                        "imageUrl":  "https://dev.services.ergo/ITERGO/_api/_common/identityImage?id=cac68089-ecc5-4325-99f2-4ba3c4367643"
-                    },
-    "createdDate":  "2019-05-29T12:11:15.8Z",
-    "comment":  "Created team project folder $/API_CUSTOMER via the Team Project Creation Wizard",
-    "_links":  {
-                   "self":  {
-                                "href":  "https://dev.services.ergo/ITERGO/API_CUSTOMER/_apis/tfvc/changesets/283516"
-                            },
-                   "changes":  {
-                                   "href":  "https://dev.services.ergo/ITERGO/_apis/tfvc/changesets/283516/changes"
-                               },
-                   "workItems":  {
-                                     "href":  "https://dev.services.ergo/ITERGO/_apis/tfvc/changesets/283516/workItems"
-                                 },
-                   "web":  {
-                               "href":  "https://dev.services.ergo/ITERGO/API_CUSTOMER/_versionControl/changeset/283516"
-                           },
-                   "author":  {
-                                  "href":  "https://dev.services.ergo/ITERGO/_apis/Identities/cac68089-ecc5-4325-99f2-4ba3c4367643"
-                              },
-                   "checkedInBy":  {
-                                       "href":  "https://dev.services.ergo/ITERGO/_apis/Identities/cac68089-ecc5-4325-99f2-4ba3c4367643"
-                                   }
-               }
-}
-
-
-
-
-
-https://dev.services.ergo/ITERGO/_apis/Identities/cac68089-ecc5-4325-99f2-4ba3c4367643
-Request succeeded
-{
-    "Id":  "cac68089-ecc5-4325-99f2-4ba3c4367643",
-    "Descriptor":  {
-                       "IdentityType":  "System.Security.Principal.WindowsIdentity",
-                       "Identifier":  "S-1-5-21-1177238915-651377827-725345543-63948"
-                   },
-    "ProviderDisplayName":  "Voß, Jürgen (TEMA2HH)",
-    "CustomDisplayName":  null,
-    "DisplayName":  "Voß, Jürgen (TEMA2HH)",
-    "IsActive":  true,
-    "UniqueUserId":  0,
-    "IsContainer":  false,
-    "Members":  [
-
-                ],
-    "MemberOf":  [
-
-                 ],
-    "Properties":  {
-                       "SchemaClassName":  "User",
-                       "Description":  "Voß, Jürgen; TEMA2HH, +49 40 6376-6411",
-                       "Domain":  "ERGO",
-                       "Account":  "A25731",
-                       "DN":  "CN=A25731,OU=Users,OU=.Common,OU=IR,DC=CORP,DC=ERGO",
-                       "Mail":  "Juergen.Voss@ITERGO.com",
-                       "SpecialType":  "Generic",
-                       "ComplianceValidated":  "2026-01-24T00:00:00Z",
-                       "DirectoryAlias":  "A25731"
-                   }
-}
-
-
-
-
-
-https://dev.services.ergo/ITERGO/_api/_common/identityImage?id=cac68089-ecc5-4325-99f2-4ba3c4367643
-see ./photo.jpg
