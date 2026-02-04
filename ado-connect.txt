@@ -12,13 +12,30 @@ $changesetId  = "283516"
 # self must me unicode decoded
 
 # uri to changeset - base
-$uri = "https://$server/$organization/$project/_apis/tfvc/changesets/$changesetId ?api-version=7.0"
+#$uri = "https://$server/$organization/$project/_apis/tfvc/changesets/$changesetId ?api-version=7.0"
 # this secret space after $changesetId is needed
+
+# uri to changeset - base + includedetails
+#$uri = "https://$server/$organization/$project/_apis/tfvc/changesets/$changesetId ?api-version=7.0&includeDetails=1"
+# this secret space after $changesetId is needed
+
+# uri to changeset changes
+# $uri = "https://$server/$organization/_apis/tfvc/changesets/$changesetId/changes?api-version=7.0"
+# https://dev.services.ergo/ITERGO/API_CUSTOMER/_apis/tfvc/changesets/283516/changes?api-version=7.0
+# https://dev.services.ergo/ITERGO/_apis/tfvc/changesets/283516/changes
+# url to changes is built in a little different way than previous
+
+# uri do identity
+$uri = "https://$server/$organization/_apis/Identities/cac68089-ecc5-4325-99f2-4ba3c4367643"
+
+# - list all "commits"
+
 
 Write-Host $uri
 
 # ====== AUTORYZACJA ======
 # Azure DevOps wymaga Basic Auth, gdzie:
+
 # username = cokolwiek (najczęściej pusty string)
 # password = PAT
 $base64AuthInfo = "OjdlNzJ6cXR0a3E2aDZycm5md202anpkb3R4YW1xcXdoY3lvMzZza3Jyd2NrZzY2ZWdocXE="
