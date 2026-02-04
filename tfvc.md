@@ -1,4 +1,5 @@
 Request
+
 `https://dev.services.ergo/ITERGO/API_CUSTOMER/_apis/tfvc/items?api-version=7.0&path=%24%2FAPI_CUSTOMER`
 
 Response
@@ -22,6 +23,7 @@ Response
 ```
 
 Request
+
 `https://dev.services.ergo/ITERGO/API_CUSTOMER/_apis/tfvc/changesets/283516 ?api-version=7.0`
 
 Response
@@ -69,6 +71,7 @@ Response
 ```
 
 Request
+
 `https://dev.services.ergo/ITERGO/_apis/Identities/cac68089-ecc5-4325-99f2-4ba3c4367643`
 
 Response
@@ -106,6 +109,9 @@ Response
 ```
 
 Request
+
 `https://dev.services.ergo/ITERGO/_api/_common/identityImage?id=cac68089-ecc5-4325-99f2-4ba3c4367643`
+
 Response
+
 ![identityImage](photo.jpg)
