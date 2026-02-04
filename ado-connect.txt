@@ -170,3 +170,10 @@ Request succeeded
                        "DirectoryAlias":  "A25731"
                    }
 }
+
+
+
+
+
+https://dev.services.ergo/ITERGO/_api/_common/identityImage?id=cac68089-ecc5-4325-99f2-4ba3c4367643
+see ./photo.jpg
