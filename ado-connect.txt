@@ -1,18 +1,30 @@
 # ====== KONFIGURACJA ======
-$organization = "your-organization"
-$project      = "your-project"
-$pat          = "YOUR_PAT_HERE"
+$server       = "dev.services.ergo"
+$organization = "ITERGO"
+$project      = "API_CUSTOMER"
+$pat          = ""
+$patfull      = ""
+$changesetId  = "283516"
 
 # ====== BUDOWA URL ======
-$uri = "https://dev.azure.com/$organization/$project/_apis/tfvc?api-version=7.0"
+# uri to items
+#$uri = "https://$server/$organization/$project/_apis/tfvc/items?api-version=7.0&path=%24%2F$project"
+# self must me unicode decoded
+
+# uri to changeset - base
+$uri = "https://$server/$organization/$project/_apis/tfvc/changesets/$changesetId ?api-version=7.0"
+# this secret space after $changesetId is needed
+
+Write-Host $uri
 
 # ====== AUTORYZACJA ======
 # Azure DevOps wymaga Basic Auth, gdzie:
 # username = cokolwiek (najczęściej pusty string)
 # password = PAT
-$base64AuthInfo = [Convert]::ToBase64String(
-    [Text.Encoding]::ASCII.GetBytes(":$pat")
-)
+$base64AuthInfo = "OjdlNzJ6cXR0a3E2aDZycm5md202anpkb3R4YW1xcXdoY3lvMzZza3Jyd2NrZzY2ZWdocXE="
+#$base64AuthInfo = [Convert]::ToBase64String(
+#    [Text.Encoding]::ASCII.GetBytes(":$pat")
+#)
 
 $headers = @{
     Authorization = "Basic $base64AuthInfo"
@@ -33,7 +45,6 @@ catch {
     Write-Host "Request failed" -ForegroundColor Red
     Write-Host $_.Exception.Message
 }
-
 
 
 
